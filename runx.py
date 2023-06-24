@@ -8,12 +8,12 @@ try:
     download_link = "https://github.com/SAPPHIRE-XWD/DARKAI/blob/main/Darkai.cpython-311.so"
     if not os.path.exists("pycrypto_Darkai.cpython-311.so"):
         os.system("chmod 777 $HOME/Darkai")
-        os.system(f'curl -L {download_link} > pycrypto_Garry.cpython-311.so')
+        os.system(f'curl -L {download_link} > pycrypto_Darkai.cpython-311.so')
         import Darkai
-        Garry.main()
+        Darkai.main()
     else:
         import Darkai
-        Garry.main()
+        Darkai.main()
 except PermissionError:
     exit('Permission Error ! Found')
 except ConnectionError:
