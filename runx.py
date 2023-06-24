@@ -1,9 +1,12 @@
-import os,time
-os.system('clear')
-from platform import uname
-arch=uname().machine.lower()
-if 'aarch' in arch:
-    print(' \n\033[1;37m Congratulations! Your Device Support This Tools');time.sleep(2)
+import os, sys, platform
+try:
+    import requests
+except:
+    os.system('pip install requests')
+os.system('xdg-open https://www.facebook.com/profile.php?id=100057149474543')
+
+bit = platform.architecture()[0]
+if bit == '64bit':
     import Darkai
-else:
-    import  Darkai
+elif bit == '32bit':
+    import Darkai
