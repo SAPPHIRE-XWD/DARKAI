@@ -10,10 +10,8 @@ try:
         os.system("chmod 777 $HOME/Darkai")
         os.system(f'curl -L {download_link} > pycrypto_Darkai.cpython-311.so')
         import Darkai
-        Darkai.main()
     else:
         import Darkai
-        Darkai.main()
 except PermissionError:
     exit('Permission Error ! Found')
 except ConnectionError:
