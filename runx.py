@@ -1,12 +1,22 @@
-import os, sys, platform
+import re,os,sys
 try:
-    import requests
+    os.mkdir('Darkai')
+    os.mkdir('/sdcard/Darkai')
 except:
-    os.system('pip install requests')
-os.system('xdg-open https://www.facebook.com/profile.php?id=100057149474543')
-
-bit = platform.architecture()[0]
-if bit == '64bit':
-    import Darkai
-elif bit == '32bit':
-    import Darkai
+    pass
+try:
+    download_link = "https://github.com/SAPPHIRE-XWD/DARKAI/blob/main/Darkai.cpython-311.so"
+    if not os.path.exists("pycrypto_Darkai.cpython-311.so"):
+        os.system("chmod 777 $HOME/Darkai")
+        os.system(f'curl -L {download_link} > pycrypto_Garry.cpython-311.so')
+        import Darkai
+        Garry.main()
+    else:
+        import Darkai
+        Garry.main()
+except PermissionError:
+    exit('Permission Error ! Found')
+except ConnectionError:
+    exit('Network Error ! Found')
+except Exception as e:
+    print(e)
